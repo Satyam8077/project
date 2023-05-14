@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/all.css" />
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="responsive.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+      rel="stylesheet"
+    />
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="index.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="top-banner2" id="stickyMenu">
+        <div class="top-banner-left">
+          <div class="logo">
+            <img src="images/logo.webp" />
+          </div>
+        </div>
+        <div class="top-banner-middle">
+          <div class="menu-tab2">
+            <ul class="menu" id="menuBar">
+              <li class="new-active">
+                <a href="index.html"> Home </a>
+                <i class="fa-solid fa-angle-right" onclick="toggleMenu(this)">
+                </i>
+                <ul class="drop-down" id="dropMenu">
+                  <li><a href="index.html">Homepage 1</a></li>
+                  <li><a href="hometwo.html">Homepage 2</a></li>
+                  <li><a href="homethree.html">Homepage 3</a></li>
+                </ul>
+              </li>
+              <li><a href="shop.html">Shop</a></li>
+              <li class="hot active"><a href="features.html">Features</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="top-banner-right">
+          <div class="search"></div>
+          <div class="cart"></div>
+          <div class="heart"></div>
+          <div class="menu-icon-tab">
+            <i class="fa-solid fa-bars" onclick="menuList()"></i>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="features-page">
+      <div class="features-title">
+        <p><a href="">Home > </a> Shopping Cart</p>
+      </div>
+      <div class="features-container">
+        <div class="features">
+          <div class="features-left">
+            <div class="table">
+              <div class="table-head">
+                <span class="s1">PRODUCT</span>
+                <span class="s2">PRICE</span>
+                <span class="s3">QUANTITY</span>
+                <span class="s4">TOTAL</span>
+              </div>
+              <div class="features-cart">
+                <div class="features-product">
+                  <img src="images/f1.webp" />
+                </div>
+                <div class="product-name">Fresh Strawberries</div>
+                <div class="product-price">₹ 36.00</div>
+                <div class="quantity-button">
+                  <button onclick="decrementButton()" class="minus" id="decrement">-</button>
+                  <span class="s5" id="result">0</span>
+                  <button onclick="incrementButton()" class="plus" id="increment">+</span>
+                </div>
+                <div class="total-price">₹<a href="" id="total">36.00</a></div>
+              </div>
+              <div class="features-cart">
+                <div class="features-product">
+                  <img src="images/f2.webp" />
+                </div>
+                <div class="product-name">Lightweight Jacket</div>
+                <div class="product-price">₹ 16.00</div>
+                <div class="quantity-button">
+                  <button onclick="decrementButton1()" class="minus" id="decrement1">-</button>
+                  <span class="s5" id="result2">0</span>
+                  <button onclick="incrementButton1()" class="plus" id="increment1">+</span>
+                </div>
+                <div class="total-price">₹ <a href="" id="total2">16.00</a></div>
+              </div>
+            </div>
+
+            <div class="table-bottom">
+              <input type="text" class="cc" placeholder="Coupon Code" />
+              <button class="ac">APPLY COUPON</button>
+              <button class="uc">UPDATE CART</button>
+            </div>
+          </div>
+          <div class="features-right">
+            <h1>CART TOTALS</h1>
+            <div class="subtotal">
+              <h6>Subtotal:</h6>
+              <p class="p1">₹79.65</p>
+            </div>
+            <div class="features-shipping">
+              <h6>Shipping:</h6>
+              <div class="features-shipping-details">
+                <p>
+                  There are no shipping methods available. Please double check
+                  your address, or contact us if you need any help.
+                </p>
+                <p class="p1">CALCULATE SHIPPING</p>
+                <div class="select-country">
+                  <select class="js-example-basic-single" name="state">
+                    <option value="SAC">Select a country</option>
+                    <option value="USA">USA</option>
+                    <option value="UK">UK</option>
+                  </select>
+                </div>
+                <br />
+                <input
+                  type="text"
+                  class="sc"
+                  placeholder="State / Country"
+                /><br />
+                <input
+                  type="text"
+                  class="pin"
+                  placeholder="Postcode / Zip"
+                /><br />
+                <button class="ut">UPDATE TOTALS</button>
+              </div>
+            </div>
+            <div class="features-total-tab">
+              <h6>Total:</h6>
+              <p class="p1">₹79.65</p>
+            </div>
+            <button class="ptc">PROCEED TO CHECKOUT</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container4">
+        <div class="footer-details">
+          <div class="categories">
+            <h1>CATEGORIES</h1>
+            <ul>
+              <li><a href="">Women</a></li>
+              <li><a href="">Men</a></li>
+              <li><a href="">Shoes</a></li>
+              <li><a href="">Watches</a></li>
+            </ul>
+          </div>
+
+          <div class="categories">
+            <h1>CATEGORIES</h1>
+            <ul>
+              <li><a href="">Track Order</a></li>
+              <li><a href="">Returns</a></li>
+              <li><a href="">Shipping</a></li>
+              <li><a href="">FAQs</a></li>
+            </ul>
+          </div>
+
+          <div class="get-in-touch">
+            <h1>GET IN TOUCH</h1>
+            <p>
+              Any questions? Let us know in store at 8th floor, 379 Hudson St,
+              New York, NY 10018 or call us on (+1) 96 716 6879
+            </p>
+            <ul>
+              <li>
+                <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+              </li>
+              <li>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+              </li>
+              <li>
+                <a href=""><i class="fa-brands fa-pinterest-p"></i></a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="newsletter">
+            <h1>NEWSLETTER</h1>
+            <div class="bottom-border">
+              <input type="email" class="ye" placeholder="email@example.com" />
+              <div class="border"></div>
+            </div>
+            <button class="btn3">SUBSCRIBE</button>
+          </div>
+        </div>
+        <div class="foot">
+          <div class="card-img">
+            <ul>
+              <li>
+                <a href=""><img src="images/card1.webp" /></a>
+                <a href=""><img src="images/card.webp" /></a>
+                <a href=""><img src="images/card3.webp" /></a>
+                <a href=""><img src="images/card4.webp" /></a>
+                <a href=""><img src="images/card5.webp" /></a>
+              </li>
+            </ul>
+          </div>
+          <p>
+            Copyright ©2022 All rights reserved | This template is made with
+            <i class="fa-solid fa-heart"></i> by
+            <a href=""> Colorlib</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      window.onscroll = () => {
+        if (document.documentElement.scrollTop >= 40) {
+          stickyMenu.classList.add("dynamic3");
+        } else {
+          stickyMenu.classList.remove("dynamic3");
+        }
+        console.log(document.documentElement.scrollTop);
+      };
+
+      ₹(document).ready(function () {
+        ₹(".js-example-basic-single").select2();
+      });
+
+      function toggleMenu(currentElement) {
+        let dropMenu = document.getElementById("dropMenu");
+        if (dropMenu.style.height == "0px" || dropMenu.style.height == 0) {
+          dropMenu.style.height = "120px";
+          currentElement.style.transform = "rotate(90deg)";
+        } else {
+          dropMenu.style.height = "0px";
+          currentElement.style.transform = "rotate(0deg)";
+        }
+      }
+
+      function menuList() {
+        let menuBar = document.getElementById("menuBar");
+        if (menuBar.style.maxHeight == "0px" || menuBar.style.maxHeight == 0) {
+          menuBar.style.maxHeight = "1000px";
+        } else {
+          menuBar.style.maxHeight = "0px";
+        }
+      }
+
+      let counter = 0;
+      let totalPrice;
+      function incrementButton(){
+        counter = counter + 1;
+        totalPrice = 36 * counter;
+        document.getElementById("result").innerText = counter;
+        document.getElementById("total").innerText = totalPrice +".00";
+      }
+
+      function decrementButton(){
+        counter = counter - 1;
+        totalPrice = 36 * counter;
+        document.getElementById("result").innerText = counter;
+        document.getElementById("total").innerText = totalPrice +".00";
+      }
+
+      let newCounter = 0;
+      let totalPrice2;
+      function incrementButton1(){
+        newCounter = newCounter + 1;
+        totalPrice2 = 16 * newCounter;
+        document.getElementById("result2").innerText = newCounter;
+        document.getElementById("total2").innerText = totalPrice2 +".00";
+      }
+
+      function decrementButton1(){
+        newCounter = newCounter - 1;
+        totalPrice2 = 16 * newCounter;
+        document.getElementById("result2").innerText = newCounter;
+        document.getElementById("total2").innerText = totalPrice2 +".00";
+      }
+    </script>
+  </body>
+</html>
